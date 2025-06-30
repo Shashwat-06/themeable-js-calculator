@@ -1,0 +1,119 @@
+/* Light mode UI*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mode {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+  appearance: none;
+  width: 2rem;
+  height: 2rem;
+  background-image: url(assets/darkModeIcon.png);
+  background-size: cover;
+  transition: 0.05s ease-in;
+}
+
+.mode:hover {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.calculator {
+  background-color: #717e84;
+  height: 80%;
+  width: 25%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.display {
+  height: 14%;
+  width: 93%;
+  background-color: #e9ebec;
+  border-radius: 10px;
+  color: black;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  overflow: hidden;
+  overflow-anchor: revert;
+}
+
+.displayValue {
+  margin: 5%;
+  font-size: 2rem;
+  text-align: end;
+}
+
+.keys {
+  height: 80%;
+  width: 93%;
+  color: white;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5%;
+}
+
+.key {
+  color: black;
+  border: none;
+  background-color: #e9ebec;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: background-color 0.15s ease-in;
+}
+
+.key:hover {
+  background-color: #a8afb3;
+}
+#equal {
+  font-size: larger;
+  background-color: #a8afb3;
+  font-weight: 600;
+}
+
+#equal:hover {
+  background-color: #929ba0;
+}
+
+.operator {
+  color: black;
+  border: none;
+  background-color: #e39f8c;
+  font-weight: 500;
+  border-radius: 10px;
+  transition: background-color 0.15s ease-in;
+}
+
+.operator:hover {
+  background-color: #d7765b;
+}
+
+.zero {
+  grid-column: span 2;
+}
+/* ---------------Media Queries--------------------- */
+
+@media ((min-width: 0) and (max-width: 900px)) {
+  .calculator {
+    width: 88%;
+    height: 75%;
+  }
+}

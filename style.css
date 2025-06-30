@@ -1,0 +1,122 @@
+/* dark mode UI (default) */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #0e161b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mode {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+  appearance: none;
+  width: 2rem;
+  height: 2rem;
+  background-image: url(assets/lightModeIcon.png);
+  background-size: cover;
+  transition: 0.05s ease-in;
+}
+
+.mode:hover {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.calculator {
+  background-color: #152229;
+  height: 80%;
+  width: 25%;
+  box-shadow: 1px 1px 2px #233743;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.display {
+  height: 14%;
+  width: 93%;
+  background-color: #2a4351;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  overflow: hidden;
+  overflow-anchor: revert;
+}
+
+.displayValue {
+  margin: 5%;
+  font-size: 2rem;
+  text-align: end;
+}
+
+.keys {
+  height: 80%;
+  width: 93%;
+  color: white;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5%;
+}
+
+.key {
+  color: white;
+  border: none;
+  background-color: #2a4351;
+  font-weight: 500;
+
+  border-radius: 10px;
+  transition: background-color 0.15s ease-in;
+}
+
+.key:hover {
+  background-color: #38586b;
+}
+
+#equal {
+  background-color: #869298;
+  font-size: larger;
+}
+
+#equal:hover {
+  background-color: #9ca6ab;
+}
+.operator {
+  color: white;
+  border: none;
+  background-color: #c45131;
+  font-weight: 700;
+
+  border-radius: 10px;
+  transition: background-color 0.15s ease-in;
+}
+
+.operator:hover {
+  background-color: #d2694b;
+}
+
+.zero {
+  grid-column: span 2;
+}
+/* ---------------Media Queries--------------------- */
+
+@media ((min-width: 0) and (max-width: 900px)) {
+  .calculator {
+    width: 88%;
+    height: 75%;
+  }
+}
